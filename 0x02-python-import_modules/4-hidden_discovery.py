@@ -4,6 +4,5 @@ if __name__ == "__main__":
     definednames = dir(hidden_4)  # names defined by a module
     definednames.sort()
     for definedname in definednames:
-        if definedname[0] != "_" and definedname[1] != "_":
-            # if_not started with _ 
+        if definedname[0] != "_":  # if_not started with _
             print("{}".format(definedname))
