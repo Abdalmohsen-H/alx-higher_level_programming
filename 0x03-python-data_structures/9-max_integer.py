@@ -9,7 +9,7 @@ def max_integer(my_list=[]):
     for idx, elem in enumerate(my_list):
         if elem > maxval:
             maxval = elem
-    return maxval
+    return (maxval)
 
 
 """
