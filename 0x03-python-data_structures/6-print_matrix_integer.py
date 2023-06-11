@@ -3,10 +3,10 @@
 
 
 def print_matrix_integer(matrix=[[]]):
-    for idx, elem in enumerate(matrix):
-        for idx, subelem in enumerate(elem):
-            print(f"{subelem}", end="")
-            if idx+1 < len(elem):
+    for row, sublist in enumerate(matrix):
+        for idx, subelem in enumerate(sublist):
+            print("{:d}".format(subelem), end="")
+            if idx+1 < len(sublist):
                 print(" ", end="")
         print("")
 
