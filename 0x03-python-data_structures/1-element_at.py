@@ -1,11 +1,10 @@
 #!/usr/bin/python3
-foundindx = 0
+# task 1 code
 
 
 def element_at(my_list, idx):
+    if idx < 0 or idx > (len(my_list) - 1):
+        return None
     for indx in range(len(my_list)):
         if idx == indx:
-            foundindx = 1
             return my_list[indx]
-    if foundindx != 1:
-        return None
