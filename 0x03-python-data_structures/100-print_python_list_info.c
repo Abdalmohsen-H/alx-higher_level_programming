@@ -26,7 +26,7 @@ void print_python_list_info(PyObject *lst)
 
 	for (indx = 0; indx < list_sizevar; indx++)
 	{
-		printf("Element %d:", indx);
+		printf("Element %d: ", indx);
 		printf("%s\n", tmplst->ob_item[indx]->ob_type->tp_name);
 		/*above do lines the same as commented lines below*/
 		/*elemitem = PyList_GetItem(lst, indx);*/
