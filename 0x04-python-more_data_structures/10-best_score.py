@@ -3,7 +3,7 @@ def best_score(a_dictionary):
     # task 10 : return key of highest val
     if a_dictionary:
         # get first key of dict
-        bst_score = list(a_dictionary.keys()) [0]
+        bst_score = list(a_dictionary.keys())[0]
         for ky, val in a_dictionary.items():
             bst_score = ky if val > a_dictionary[bst_score] else bst_score
         return bst_score
