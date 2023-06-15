@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     # task 12 interview question : roman to decimal converter
-    # if !(isinstance(roman_string, str)):  # better for type checking 
+    # if !(isinstance(roman_string, str)):  # better for type checking
     if type(roman_string) != str or roman_string is None:
         return 0
     total = 0
@@ -39,5 +39,15 @@ roman_number = "LXXXVII"
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 
 roman_number = "DCCVII"
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+# extra special cases
+roman_number = 36
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = None
+print("{} = {}".format(roman_number, roman_to_int(roman_number)))
+
+roman_number = ""
 print("{} = {}".format(roman_number, roman_to_int(roman_number)))
 """
