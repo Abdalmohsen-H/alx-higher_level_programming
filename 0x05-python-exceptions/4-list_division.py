@@ -9,6 +9,8 @@ def list_division(my_list_1, my_list_2, list_length):
             if type(my_list_1[idx]) not in (int, float):
                 print("wrong type")
             res = my_list_1[idx] / my_list_2[idx]
+        except TypeError:
+            print("wrong type")
         except ZeroDivisionError:
             print("division by 0")
         except IndexError:
