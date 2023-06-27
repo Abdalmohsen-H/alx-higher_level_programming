@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 class Square():
-    # task 2 , private attribut + class accept arguments
+    # task 2 , private nstance attribut + class accept arguments
     # define extra method to reassign values to size
     # but alse implement exception with specific msgs
 
