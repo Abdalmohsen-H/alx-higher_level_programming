@@ -14,4 +14,8 @@ def safe_print_integer_err(value):
     except Exception:
         print("Exception: {}".format(sys.exc_info()[1]), file=sys.stderr)
         # print("sys.exc_info(): {}".format(sys.exc_info()))
+        '''
+        or use except Exception as err:
+        print("Exception: {}".format(err), file=sys.stderr)
+        '''
         return (False)
