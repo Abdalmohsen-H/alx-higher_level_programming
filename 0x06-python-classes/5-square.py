@@ -45,3 +45,5 @@ class Square():
                 for Hunit in range(self.__size):
                     print("#", end="")
                 print("\n", end="")
+        else:  # size == 0 then print new line
+            print("")
