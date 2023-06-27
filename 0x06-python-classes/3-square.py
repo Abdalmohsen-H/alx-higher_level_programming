@@ -2,7 +2,7 @@
 """task 3 """
 
 
-Square():
+class Square():
     """# task 3 , private instance field(variable)
     # class accept optional argument size
     # alse implement exception with specific msgs
