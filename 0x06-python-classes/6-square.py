@@ -69,8 +69,8 @@ class Square():
         """ position setter """
         for idx, val in enumerate(value):
             msg = "position must be a tuple of 2 positive integers"
-            if (type(val) != int or val < 0 or idx > 1 or
-                    type(value) != tuple):
+            if (type(val) != int or val < 0 or
+                    len(value) != 2 or type(value) != tuple):
                 raise TypeError(msg)
                 return
         self.__position = value
