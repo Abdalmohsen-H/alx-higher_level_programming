@@ -39,6 +39,22 @@ class Square():
             raise ValueError("size must be >= 0")
         self.__size = value
 
+    @property
+    def position(self):
+        """ position field getter """
+        return self.__position
+
+    @position.setter
+    def position(self, value):
+        """ position setter """
+        for idx, val in enumerate(value):
+            msg = "position must be a tuple of 2 positive integers"
+            if (type(val) != int or val < 0 or idx > 1 or
+                    type(value) != tuple):
+                raise TypeError(msg)
+                return
+        self.__position = value
+
     def my_print(self):
         """ print square using #'s in stdout
         and won't print anything if size = 0
@@ -79,19 +95,3 @@ class Square():
         else:  # size == 0 then print new line
             print("")
         return ("")  # must return string type
-
-    @property
-    def position(self):
-        """ position field getter """
-        return self.__position
-
-    @position.setter
-    def position(self, value):
-        """ position setter """
-        for idx, val in enumerate(value):
-            msg = "position must be a tuple of 2 positive integers"
-            if (type(val) != int or val < 0 or idx > 1 or
-                    type(value) != tuple):
-                raise TypeError(msg)
-                return
-        self.__position = value
