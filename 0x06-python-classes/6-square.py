@@ -43,12 +43,16 @@ class Square():
     def my_print(self):
         """ print square using #'s in stdout
         and won't print anything if size = 0
+        position = (x, y)
+        self.__position[0] = shift in x axis
+        self.__position[1] = shift in y axis
         """
         if self.__size > 0:
+            for spc in range(self.__position[1]):
+                print("")
             for Vunit in range(self.__size):
-                if self.__position[1] == 0:
-                    for spc in range(self.__position[0]):
-                        print(" ", end="")
+                for spc in range(self.__position[0]):
+                    print(" ", end="")
                 for Hunit in range(self.__size):
                     print("#", end="")
                 print("\n", end="")
@@ -64,8 +68,11 @@ class Square():
     def position(self, value):
         """ position setter """
         for idx, val in enumerate(value):
+            msg = "position must be a tuple of 2 positive integers"
             if type(val) != int or val < 0 or idx > 1:
-                msg = "position must be a tuple of 2 positive integers"
+                raise TypeError(msg)
+                return
+            if type(value) != tuple:
                 raise TypeError(msg)
                 return
         self.__position = value
