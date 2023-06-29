@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-import math
 """
 given bytecode .pyc I figured out the .py file
 python code for circle calulations
 """
+
+
+import math
 
 
 class MagicClass:
