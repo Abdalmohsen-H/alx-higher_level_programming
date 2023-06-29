@@ -91,7 +91,8 @@ class Square():
                     print(" ", end="")
                 for Hunit in range(self.__size):
                     print("#", end="")
-                print("\n", end="")
+                if Vunit < (self.__size - 1):
+                    print("\n", end="")
         else:  # size == 0 then print new line
             print("")
-        return ("", end="")  # must return string type
+        return ("")  # must return string type
