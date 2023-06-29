@@ -93,6 +93,4 @@ class Square():
                     print("#", end="")
                 if Vunit < (self.__size - 1):
                     print("\n", end="")
-        else:  # size == 0 then print new line
-            print("")
         return ("")  # must return string type
