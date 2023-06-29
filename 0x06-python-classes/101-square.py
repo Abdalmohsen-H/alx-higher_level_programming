@@ -94,4 +94,4 @@ class Square():
                 print("\n", end="")
         else:  # size == 0 then print new line
             print("")
-        return ("")  # must return string type
+        return ("", end="")  # must return string type
