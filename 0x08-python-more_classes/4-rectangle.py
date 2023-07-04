@@ -79,3 +79,7 @@ class Rectangle:
                 if Vunit < self.__height - 1:
                     print("\n", end="")
         return ""
+
+    def __repr__(self):
+        ''' __repr__ magic method of class rectangle '''
+        return "Rectangle({}, {})".format(self.__width, self.__height)
