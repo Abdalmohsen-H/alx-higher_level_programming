@@ -13,8 +13,8 @@ class Rectangle:
         ''' intialize instance (object) of class
         Rectangle
         '''
-        self.width = width
-        self.height = height
+        self.__width = width
+        self.__height = height
 
     @property
     def width(self):
