@@ -28,7 +28,6 @@ class Rectangle:
         ''' width setter
         doc description for function
         '''
-        print(f"width {value}")
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value < 0:
