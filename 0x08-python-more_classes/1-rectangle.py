@@ -13,12 +13,14 @@ class Rectangle:
         ''' intialize instance (object) of class
         Rectangle
         '''
-        self.width = width
-        self.height = height
+        self.__width = 0  # intialize private
+        self.__height = 0  # intialize private
+        self.width = width  # change value via setter
+        self.height = height  # change value via setter
 
     @property
     def width(self):
-        '''width  getter
+        '''width getter
         doc description for function
         '''
         return self.__width
