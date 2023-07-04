@@ -13,10 +13,10 @@ class Rectangle:
         ''' intialize instance (object) of class
         Rectangle
         doc description for intialization function
-        __width and __hight are private
+        
         '''
-        self.__width = 0  # intialize private
-        self.__height = 0  # intialize private
+        self.width = 0
+        self.height = 0
 
     @property
     def width(self):
