@@ -71,7 +71,7 @@ class Rectangle:
         if width or height is equal to 0
         """
         if self.__width == 0 or self.__height == 0:
-            print("")
+            print("", end="")
         else:
             for Vunit in range(self.__height):
                 for Hunit in range(self.__width):
