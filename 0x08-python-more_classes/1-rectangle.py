@@ -13,8 +13,8 @@ class Rectangle:
         ''' intialize instance (object) of class
         Rectangle
         '''
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
@@ -28,6 +28,7 @@ class Rectangle:
         ''' width setter
         doc description for function
         '''
+        print(f"width {value}")
         if type(value) != int:
             raise TypeError("width must be an integer")
         if value < 0:
