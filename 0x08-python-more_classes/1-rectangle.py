@@ -9,9 +9,11 @@ class Rectangle:
     ''' This is a Rectangle class
     task 1
     '''
+    
     def __init__(self, width=0, height=0):
         ''' intialize instance (object) of class
         Rectangle
+        doc description for intialization function
         '''
         self.__width = 0  # intialize private
         self.__height = 0  # intialize private
