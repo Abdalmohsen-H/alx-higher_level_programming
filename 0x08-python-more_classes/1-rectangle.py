@@ -41,7 +41,7 @@ class Rectangle:
         '''
         return self.__height
 
-    @hight.setter
+    @height.setter
     def height(self, value):
         ''' height setter '''
         if type(value) != int:
