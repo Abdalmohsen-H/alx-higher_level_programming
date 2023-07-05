@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-lst = []
 def magic_string():
-    lst.append('BestSchool'); return ", ".join(lst)
+    magic_string.ctr = getattr(magic_string, 'ctr', 0) + 1
+    return ('BestSchool, ' * (magic_string.ctr - 1)) + 'BestSchool'
