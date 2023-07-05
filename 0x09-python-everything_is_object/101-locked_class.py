@@ -11,4 +11,4 @@ class LockedClass:
     __slots__ only accept squence like lists or tuples ...
     '''
 
-    __slots__ = 'First_name'
+    __slots__ = ["First_name"]
