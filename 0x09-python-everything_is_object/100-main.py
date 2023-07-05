@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-lst = []
-def magic_string():
-    lst.append('BestSchool'); return ", ".join(lst)
+magic_string = __import__('100-magic_string').magic_string
+
+for i in range(10):
+    print(magic_string())

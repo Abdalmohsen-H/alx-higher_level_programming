@@ -1,3 +1,4 @@
 #!/usr/bin/python3
+lst = []
 def magic_string():
-    return 'BestSchool' if i == 0 else 'BestSchool, ' * (i) + 'BestSchool' 
+    lst.append('BestSchool'); return ", ".join(lst)
