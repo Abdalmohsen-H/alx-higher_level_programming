@@ -10,12 +10,12 @@ class BaseGeometry():
     with some funcs
     '''
     name = None
-    value = None 
+    value = None
 
     def area(self):
         ''' raises Exception with msg '''
         raise Exception('area() is not implemented')
-    
+
     def integer_validator(self, name, value):
         ''' validate intager vale entered'''
         if type(value) != int:
