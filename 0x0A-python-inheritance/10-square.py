@@ -22,4 +22,4 @@ class Square(Rectangle):
 
     def __repr__(self):
         ''' repr for str() and print() '''
-        return f"[{self.__class__.__name__}] {self.__size}/{self.__size}"
+        return f"[{Rectangle.__name__}] {self.__size}/{self.__size}"
