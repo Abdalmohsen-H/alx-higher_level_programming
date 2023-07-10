@@ -4,7 +4,7 @@ Task 10 : A. Hesham
 '''
 
 
-# BaseGeometry = __import__('9-rectangle').BaseGeometry
+BaseGeometry = __import__('9-rectangle').BaseGeometry
 
 
 class Square(Rectangle):
