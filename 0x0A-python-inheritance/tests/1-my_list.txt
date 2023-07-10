@@ -1,0 +1,8 @@
+# test for task 1
+
+
+get module
+	>>> MyList = __import__('1-my_list').MyList
+
+1st object
+	>>> my_list  = MyList()
