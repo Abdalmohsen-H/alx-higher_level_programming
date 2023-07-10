@@ -21,7 +21,7 @@ class Rectangle(BaseGeometry):
 
     def __repr__(self):
         ''' repr for str() and print() '''
-        return f"[Rectangle] <{self.__width}>/<{self.__height}>"
+        return f"[{self.__class__.__name__}] {self.__width}/{self.__height}"
 
     def area(self):
         ''' override inherited area ()'''
