@@ -26,7 +26,6 @@ def get_args(obj):
         lst = load_from_json_file(filename)
         lst.extend(obj)  # add new args list to old args list
     except Exception as e:
-        print(f"{e.__class__.__name__} : {e}")
         lst = obj
     save_to_json_file(lst, filename)
 
