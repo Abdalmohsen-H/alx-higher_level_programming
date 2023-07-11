@@ -30,7 +30,12 @@ class Student():
         ''' override values of the instance attributes
         with values from json
         '''
-        for ky, val in json.loads(inptjson).items():
+        if type(inptjson) != dict:
+            nwdict = json.loads(inptjson)
+        else:
+            nwdict = inptjson
+
+        for ky, val in nwdict.items():
             # print(f"key {ky} : val {val}")
             if ky in self.__dict__:
                 self.__dict__[ky] = val
