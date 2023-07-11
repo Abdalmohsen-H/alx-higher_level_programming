@@ -8,7 +8,7 @@ returns an object (object data structure in Python)
 import json
 
 
-def to_json_string(my_obj):
+def from_json_string(my_str):
     ''' function takes JSON string representation of an object
     returns an object (object data structure in Python)
     '''
