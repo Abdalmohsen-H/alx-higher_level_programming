@@ -9,4 +9,5 @@ def read_file(filename=""):
     if len(filename) > 0:
         mode = "r"
         with open(filename, mode, encoding="utf-8") as file:
-            print(file.read(), end="")
+            for lines in file:
+                print(lines, end="")
