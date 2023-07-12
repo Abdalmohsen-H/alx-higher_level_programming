@@ -36,3 +36,7 @@ test integer_validator("height", -5)
     Traceback (most recent call last):
     ValueError: height must be greater than 0
 
+test integer_validator() with non itnteger value
+    >>> bg.integer_validator("height", "-5")
+    Traceback (most recent call last):
+    TypeError: height must be an integer
