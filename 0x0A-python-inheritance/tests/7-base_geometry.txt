@@ -36,7 +36,32 @@ test integer_validator("height", -5)
     Traceback (most recent call last):
     ValueError: height must be greater than 0
 
-test integer_validator() with non itnteger value
+test integer_validator(), value is a string
     >>> bg.integer_validator("height", "-5")
+    Traceback (most recent call last):
+    TypeError: height must be an integer
+
+test integer_validator(), value is list
+    >>> bg.integer_validator("height", [-5,])
+    Traceback (most recent call last):
+    TypeError: height must be an integer
+
+test integer_validator(), value is none
+    >>> bg.integer_validator("height", None)
+    Traceback (most recent call last):
+    TypeError: height must be an integer
+
+test integer_validator(), value is set
+    >>> bg.integer_validator("height", {22 , 658})
+    Traceback (most recent call last):
+    TypeError: height must be an integer
+
+test integer_validator(), value is tuple
+    >>> bg.integer_validator("height", (22 , 658))
+    Traceback (most recent call last):
+    TypeError: height must be an integer
+
+test integer_validator(), value is boolean
+    >>> bg.integer_validator("height", False)
     Traceback (most recent call last):
     TypeError: height must be an integer
