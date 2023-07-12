@@ -17,7 +17,6 @@ def append_after(filename="", search_string="", new_string=""):
         # load lines to list
         lines = file.readlines()
         for line in lines:
-            print(f"line: {line}")
             newtxt.append(line)
             # if found match
             if search_string in line:
