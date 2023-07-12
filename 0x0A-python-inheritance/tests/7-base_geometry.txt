@@ -1,9 +1,9 @@
 # test for task 7
 
 import module
-	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 create instant
-	>>> bg = BaseGeometry()
-	>>> type(bg) == BaseGeometry
-	True
+>>> bg = BaseGeometry()
+>>> type(bg) == BaseGeometry
+True
