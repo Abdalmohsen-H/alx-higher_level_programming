@@ -9,8 +9,6 @@ class BaseGeometry():
     on pub func
     with some funcs
     '''
-    name = None
-    value = None
 
     def area(self):
         ''' raises Exception with msg '''
