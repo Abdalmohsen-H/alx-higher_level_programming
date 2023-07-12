@@ -1,9 +1,24 @@
 # test for task 7
 
 import module
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+	>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 create instant
->>> bg = BaseGeometry()
->>> type(bg) == BaseGeometry
-True
+	>>> bg = BaseGeometry()
+	>>> type(bg) == BaseGeometry
+	True
+
+test area()
+    >>> bg.area()
+    Traceback (most recent call last):
+    Exception: area() is not implemented
+
+test integer_validator()
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+test integer_validator()
+    >>> bg.integer_validator("anything")
+    Traceback (most recent call last):
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
