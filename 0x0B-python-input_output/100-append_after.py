@@ -7,12 +7,21 @@ insert a specific line after
 
 
 def append_after(filename="", search_string="", new_string=""):
+    ''' a function that read file and search
+    each line for a specific word
+    if line have the word, then
+    insert a specific line after
+    '''
+    newtxt = []
     with open(filename, mode="r+") as file:
-        donechars = 0
-        for line in file:
-            donechars += len(line)
+        # load lines to list
+        lines = file.readlines()
+        for line in lines:
+            print(f"line: {line}")
+            newtxt.append(line)
+            # if found match
             if search_string in line:
-                file.seek(donechars, 0)  # move cursor after line
-                file.write(new_string)
-                donechars += len(new_string)
-                file.seek(donechars, 0)
+                # add new string line after match line
+                newtxt.append(new_string)
+        file.seek(0)  # reset cursor to start of file
+        file.writelines(newtxt)  # overwrite txt file
