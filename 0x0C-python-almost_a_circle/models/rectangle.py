@@ -75,3 +75,23 @@ class Rectangle(Base):
             raise ValueError("y must be >= 0")
 
         self.__y = value
+
+    def area(self):
+        ''' return area of the rectangle'''
+        return (self.__width * self.__height)
+
+    def display(self):
+        if self.__width == 0 or self.__height == 0:
+            print("", end="")
+        else:
+            for Vunit in range(self.__height):
+                for Hunit in range(self.__width):
+                    print("#", end="")
+                if Vunit < self.__height - 1:
+                    print("\n", end="")
+        print("\n", end="")
+
+    def __repr__(self):
+        ''' repr for str() and print() '''
+        return f"[{self.__class__.__name__}] ({self.id}) \
+{self.__x}/{self.__y} - {self.__width}/{self.__height}"
