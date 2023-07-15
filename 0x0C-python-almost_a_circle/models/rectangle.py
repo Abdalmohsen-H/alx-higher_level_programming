@@ -84,7 +84,11 @@ class Rectangle(Base):
         if self.__width == 0 or self.__height == 0:
             print("", end="")
         else:
+            for ydist in range(self.__y):
+                print()
             for Vunit in range(self.__height):
+                for xdist in range(self.__x):
+                    print(" ", end="")
                 for Hunit in range(self.__width):
                     print("#", end="")
                 if Vunit < self.__height - 1:
