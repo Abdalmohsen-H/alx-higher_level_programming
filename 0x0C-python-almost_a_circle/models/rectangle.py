@@ -81,6 +81,7 @@ class Rectangle(Base):
         return (self.__width * self.__height)
 
     def display(self):
+        ''' displays the rectangle (draw it) '''
         if self.__width == 0 or self.__height == 0:
             print("", end="")
         else:
