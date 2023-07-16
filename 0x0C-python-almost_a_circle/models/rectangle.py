@@ -116,3 +116,10 @@ class Rectangle(Base):
             # print(f"kwargs : {kwargs}")
             for ky, val in kwargs.items():
                 setattr(self, ky, val)
+
+    def to_dictionary(self):
+        ''' desc : returns dict representation of rect class '''
+        return {
+            'x': self.x, 'y': self.y, 'id': self.id,
+            'height': self.height, 'width': self.width
+        }
