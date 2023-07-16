@@ -96,24 +96,22 @@ class Rectangle(Base):
                     print("\n", end="")
         print("\n", end="")
 
+    def __str__(self):
+        ''' __str of a class '''
+        return f"[{self.__class__.__name__}] ({self.id}) \
+{self.__x}/{self.__y} - {self.__width}/{self.__height}"
+
     def __repr__(self):
-        ''' repr for str() and print() '''
+        ''' _repr__ of a class '''
         return f"[{self.__class__.__name__}] ({self.id}) \
 {self.__x}/{self.__y} - {self.__width}/{self.__height}"
 
     def update(self, *args, **kwargs):
-        ''' update attibutes using args
-        if args doesn't exist use kwargs
-        '''
+        ''' update attibutes using args '''
+        attrs = ['id', 'width', 'height', 'x', 'y']
         if args and len(args) > 0:
-            try:
-                self.id = args[0]
-                self.width = args[1]
-                self.height = args[2]
-                self.x = args[3]
-                self.y = args[4]
-            except Exception as e:
-                pass
+            for idx in range(len(args)):
+                setattr(self, attrs[idx], args[idx])
         elif kwargs:
             # print(f"kwargs : {kwargs}")
             for ky, val in kwargs.items():
