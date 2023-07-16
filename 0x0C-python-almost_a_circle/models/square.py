@@ -50,3 +50,9 @@ class Square(Rectangle):
             # print(f"kwargs : {kwargs}")
             for ky, val in kwargs.items():
                 setattr(self, ky, val)
+
+    def to_dictionary(self):
+        ''' desc : returns dict representation of rect class '''
+        return {
+            'id': self.id, 'size': self.size, 'x': self.x, 'y': self.y
+        }
