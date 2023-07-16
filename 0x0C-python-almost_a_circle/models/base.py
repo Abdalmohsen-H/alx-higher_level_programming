@@ -49,3 +49,12 @@ class Base():
                     list_ofdicts.append(dicto)
                 text = cls.to_json_string(list_ofdicts)
                 file.write(text)
+
+    @staticmethod
+    def from_json_string(json_string):
+        ''' take json string representing a list of dictionaries
+        return actual list of dictionaries
+        '''
+        if json_string is None or len(json_string) < 1:
+            return []
+        return json.loads(json_string)
