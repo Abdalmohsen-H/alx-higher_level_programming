@@ -142,3 +142,38 @@ class Base():
         except Exception as e:  # FileNotFoundError
             print(f"{e.__class__.__name__}  : {e}")
             return []
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        ''' draw shapes of inctances of classes
+        using turtle'''
+        import turtle
+        t = turtle.Turtle()
+        turtle.bgcolor("black")
+        t.hideturtle()
+        colors = ['white', 'red', 'green', 'blue']
+        for rect, idx in zip(list_rectangles, range(len(list_rectangles))):
+            try:
+                t.color(colors[idx])
+            except Exception:
+                t.color('yellow')
+            t.penup()
+            t.goto(rect.x, rect.y)
+            t.pendown()
+            for itr in range(2):
+                t.forward(rect.width)
+                t.right(90)
+                t.forward(rect.height)
+                t.right(90)
+        sqcolors = ['green', 'yellow', 'orange', 'blue']
+        for sqr, idx in zip(list_squares, range(len(list_squares))):
+            try:
+                t.color(sqcolors[idx])
+            except Exception:
+                t.color('pink')
+            t.penup()
+            t.goto(sqr.x, sqr.y)
+            t.pendown()
+            for itr in range(4):
+                t.forward(sqr.size)
+                t.right(90)
