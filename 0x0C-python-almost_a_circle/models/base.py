@@ -6,6 +6,7 @@ a. Hesham
 
 
 import json
+import csv
 
 
 class Base():
@@ -122,18 +123,22 @@ class Base():
         '''
         try:
             file_name = f"{cls.__name__}.csv"
-            get_data = []
+            dictList = []
             inst_list = []
             with open(file_name, "r") as file:
                 csvdata = csv.DictReader(file)
                 # if you want header of csv
                 # header = csvdata.fieldnames
                 for row in csvdata:  # loop on csv rows
-                    get_data.append(row)  # appnd. row to list
-                # print(get_data)
-                dictList = get_data
+                    dictList.append(row)  # appnd. row to list
             for dict in dictList:
+                # important to make sure value of type int
+                # as csv turned them to string
+                for ky, val in dict.items():
+                    dict[ky] = int(val)
+                # print(f"dict : {dict}")
                 inst_list.append(cls.create(**dict))
             return inst_list
         except Exception as e:  # FileNotFoundError
+            print(f"{e.__class__.__name__}  : {e}")
             return []

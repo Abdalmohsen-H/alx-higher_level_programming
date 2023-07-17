@@ -5,7 +5,7 @@ a. Hesham
 '''
 
 
-from models.rectangle import square
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
