@@ -5,7 +5,7 @@ using unittest
 '''
 
 
-from model.base import Base
+from models.base import Base
 import unittest
 
 
