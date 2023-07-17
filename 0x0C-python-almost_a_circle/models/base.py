@@ -90,3 +90,50 @@ class Base():
                 return inst_list
         except Exception as e:  # FileNotFoundError
             return []
+
+    @classmethod
+    def save_to_file_csv(cls, list_objs):
+        ''' takes list of objects then write to csv
+        '''
+        file_name = f"{cls.__name__}.csv"
+        # with open(file_name, mode="w", newline="") as file:
+        with open(file_name, mode="w") as file:
+            if list_objs:  # if list_objs is not None
+                list_ofdicts = []
+                dicto = {}
+                for obj in list_objs:
+                    dicto = cls.to_dictionary(obj)
+                    list_ofdicts.append(dicto)
+                csv_header = list_ofdicts[0].keys()
+                mywriter = csv.DictWriter(file, csv_header)
+                # till here an empty file only created
+
+                # now let's Write CSV header to file
+                mywriter.writeheader()
+
+                # now write list of dicts to rows
+                mywriter.writerows(list_ofdicts)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        ''' class method read csv then make list of dicts
+        to create instance of the calling class
+        based on attributes vales on the csv
+        '''
+        try:
+            file_name = f"{cls.__name__}.csv"
+            get_data = []
+            inst_list = []
+            with open(file_name, "r") as file:
+                csvdata = csv.DictReader(file)
+                # if you want header of csv
+                # header = csvdata.fieldnames
+                for row in csvdata:  # loop on csv rows
+                    get_data.append(row)  # appnd. row to list
+                # print(get_data)
+                dictList = get_data
+            for dict in dictList:
+                inst_list.append(cls.create(**dict))
+            return inst_list
+        except Exception as e:  # FileNotFoundError
+            return []
