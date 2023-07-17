@@ -13,7 +13,7 @@ import unittest
 class test_base(unittest.TestCase):
     ''' test case using unittesting '''
     def test_sfsg(self):
-        self.assertEqual(Base(12), 12, "should be 12")
+        self.assertEqual(Base(12).id, 12, "should be 12")
 
 if "__main__" == __name__:
     unittest.main()

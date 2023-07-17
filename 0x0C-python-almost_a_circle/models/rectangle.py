@@ -29,8 +29,8 @@ class Rectangle(Base):
         ''' private attribute width setter - A. hesham'''
         if not isinstance(value, int):  # 1st way to check - must use "not"
             raise TypeError("width must be an integer")
-        if value < 0:
-            raise ValueError("width must be >= 0")
+        if value <= 0:
+            raise ValueError("width must be > 0")
         self.__width = value
 
     @property  # getter
@@ -43,8 +43,8 @@ class Rectangle(Base):
         ''' private attribute height setter - A. hesham'''
         if type(value) is not (int):  # 2nd way to check
             raise TypeError("height must be an integer")
-        if value < 0:
-            raise ValueError("height must be >= 0")
+        if value <= 0:
+            raise ValueError("height must be > 0")
         self.__height = value
 
     @property  # getter
