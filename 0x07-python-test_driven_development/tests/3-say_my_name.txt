@@ -1,0 +1,31 @@
+# test file for task 2, A. Hesham
+# Usage: python3 -m doctest -v ./tests/3-say_my_name.txt
+
+importing the function from module
+    >>> say_my_name = __import__('3-say_my_name.py').say_my_name
+test 2 strings as input
+    >>> say_my_name("Ali", "smith")
+    My name is Ali Smith
+
+second argument isn't  a string
+    >>> say_my_name("ali", 58)
+    Traceback (most recent call last):
+	      ...
+    TypeError: last_name must be an string
+
+1st argument argument isn't  a string
+    >>> say_my_name(99, "ali")
+    Traceback (most recent call last):
+	      ...
+    TypeError: first_name must be an string
+
+case missing one argument, it will assigned to first name
+because last name has default val ""
+    >>> say_my_name("Jimmy")
+    My name is Jimmy
+
+case missing all arguments, funcation already have default value for last name if not given
+    >>> say_my_name()
+    Traceback (most recent call last):
+	      ...
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
