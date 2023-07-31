@@ -16,4 +16,4 @@ def print_square(size):
         print("")
     else:
         for Vunit in range(size):
-                print(f"{print_symbol}" * size)
+            print(f"{print_symbol}" * size)
