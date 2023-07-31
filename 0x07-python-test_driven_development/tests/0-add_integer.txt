@@ -1,0 +1,66 @@
+# test file for task 0, A. Hesham
+# Usage: python3 -m doctest -v ./tests/0-add_integer.txt
+
+importing the function from module
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+test 2 integers as input
+    >>> add_integer(5, 4)
+    9
+
+one of inputs is negative
+    >>> add_integer(5, -4)
+    1
+
+one of inputs is a string
+    >>> add_integer(10, "string")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+
+one of inputs is None
+    >>> add_integer(None, 7)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+function with None as argument
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+two arguments are float and one is negative
+    >>> add_integer(55.2, -45.7)
+    10
+
+one argument is infinity(overflow case)
+    >>> add_integer(55.2, float('inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+one argumant is negative infinty.(overflow test case)
+    >>> add_integer(53.2, float('-inf'))
+    Traceback (most recent call last):
+    ...
+    OverflowError: cannot convert float infinity to integer
+
+one argumant is undefined.
+    >>> add_integer(53.2, test)
+    Traceback (most recent call last):
+    ...
+    NameError: name 'test' is not defined
+
+one argumant is negative infinty.(overflow test case)
+    >>> add_integer(45, float('NaN'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+one of the argument is a list
+    >>> add_integer([], 58)
+    Traceback (most recent call last):
+	      ...
+    TypeError: a must be an integer
