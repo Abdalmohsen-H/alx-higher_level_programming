@@ -16,8 +16,4 @@ def print_square(size):
         print("")
     else:
         for Vunit in range(size):
-            for Hunit in range(size):
-                print("{}".format(print_symbol), end="")
-            if Vunit < size:
-                print("\n", end="")
-    return ""
+                print(f"{print_symbol}" * size)
