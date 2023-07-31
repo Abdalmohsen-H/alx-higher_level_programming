@@ -64,3 +64,13 @@ one of the argument is a list
     Traceback (most recent call last):
 	      ...
     TypeError: a must be an integer
+
+case missing one argument, it will assigned to a because b has default val 98
+    >>> add_integer(3)
+    101
+
+case missing all arguments, funcation already have default value for b if not given
+    >>> add_integer()
+    Traceback (most recent call last):
+	      ...
+    TypeError: add_integer() missing 1 required positional argument: 'a'
