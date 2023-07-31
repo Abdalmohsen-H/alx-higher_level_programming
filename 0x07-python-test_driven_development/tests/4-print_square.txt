@@ -31,7 +31,6 @@ input is negative
 
 input is zero
     >>> print_square(0)
-    <BLANKLINE>
 
 case missing all arguments
     >>> print_square()

@@ -13,7 +13,7 @@ def print_square(size):
     # print square using #'s in stdout
     print_symbol = '#'
     if size == 0:
-        print("")
+        return None
     else:
         for Vunit in range(size):
             print(f"{print_symbol}" * size)
