@@ -1,0 +1,41 @@
+# test file for task 2, A. Hesham
+# Usage: python3 -m doctest -v ./tests/4-print_square.txt
+
+importing the function from module
+    >>> print_square = __import__('4-print_square').print_square
+
+working case
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+     
+
+input is float not integer
+    >>> print_square(4.0)
+    Traceback (most recent call last):
+	      ...
+    TypeError: size must be an integer
+
+input is string
+    >>> print_square("4")
+    Traceback (most recent call last):
+	      ...
+    TypeError: size must be an integer
+
+input is negative
+    >>> print_square(-2)
+    Traceback (most recent call last):
+	      ...
+    ValueError: size must be >= 0
+
+input is zero
+    >>> print_square(0)
+     
+
+case missing all arguments
+    >>> print_square()
+    Traceback (most recent call last):
+	      ...
+    TypeError: print_square() missing 1 required positional argument: 'size'
