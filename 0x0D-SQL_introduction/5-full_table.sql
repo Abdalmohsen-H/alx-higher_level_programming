@@ -1,3 +1,3 @@
--- show description of a table without using explain or describe sql commands
+-- show description of a table
 -- task 5 : A. Hesham
 SHOW COLUMNS FROM `first_table`;
