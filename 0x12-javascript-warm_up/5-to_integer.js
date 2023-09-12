@@ -4,7 +4,7 @@
 * convert 1st arg into INT if it is a Number
  */
 
-const myArg = process.myArgv[2];
+const myArg = process.argv[2];
 const num = parseInt(myArg, 10);
 if (isNaN(num)) {
   console.log('Not a number');
