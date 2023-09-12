@@ -4,6 +4,6 @@
 */
 let newVar = 'C is fun';
 console.log(newVar);
-myVar = 'Python is cool';
+newVar = 'Python is cool';
 console.log(newVar);
 console.log( 'JavaScript is amazing');
