@@ -1,7 +1,7 @@
 #!/usr/bin/node
 /* task 5
 * A. Hesham
-* just another task
+* convert 1st arg into INT if it is a Number
  */
 
 const myArg = process.myArgv[2];
