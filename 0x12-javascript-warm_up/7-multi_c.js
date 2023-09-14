@@ -5,9 +5,6 @@
 * handle cases when no argument or argument isn't a number
 */
 const args = process.argv;
-if (args[2] === 'undefined') {
-  console.log('Missing number of occurrences');
-}
 const num = parseInt(args[2], 10);
 if (isNaN(num)) {
   console.log('Missing number of occurrences');
