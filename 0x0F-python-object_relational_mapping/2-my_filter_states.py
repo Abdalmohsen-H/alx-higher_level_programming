@@ -4,25 +4,26 @@ with a name starting with N (upper N)"""
 from sys import argv
 import MySQLdb
 
-
-DB_CONFIG = {
-    'host': 'localhost',
-    'port': 3306,
-    'user': argv[1],
-    'passwd': argv[2],
-    'db': argv[3],
-    'charset': 'utf8'
-}
-
 if __name__ == "__main__":
+    DB_CONFIG = {
+        "host": "localhost",
+        "port": 3306,
+        "user": argv[1],
+        "passwd": argv[2],
+        "db": argv[3],
+        "charset": "utf8",
+    }
+
     db_connection = MySQLdb.connect(**DB_CONFIG)
     cur = db_connection.cursor()
     try:
         sql_cmd = """
         SELECT * FROM states
         WHERE name LIKE BINARY '{:s}'
-        ORDER BY id ASC
-        """.format(argv[4])
+        ORDER BY id ASC;
+        """.format(
+            argv[4]
+        )
 
         cur.execute(sql_cmd)
         result = cur.fetchall()
