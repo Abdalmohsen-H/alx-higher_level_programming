@@ -1,6 +1,12 @@
 #!/usr/bin/python3
-""" script that lists all states from the database
-with a name starting with N (upper N)"""
+""" task 2 : py script that lists filter states by user input
+BTW this task's code isn't blocking SQL injec-tion
+
+for example : this is SQL inje-ction to get all results instead
+./2*py username pwd db_name "' OR '1'='1' --'"
+
+this will be solved on the next task; task 3
+"""
 from sys import argv
 import MySQLdb
 
