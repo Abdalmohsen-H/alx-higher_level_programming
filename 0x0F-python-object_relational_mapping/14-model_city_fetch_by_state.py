@@ -9,6 +9,7 @@ import sys
 
 # import models
 from model_state import Base, State
+from model_city import City
 
 # import sqlalchemy tools to work with
 from sqlalchemy import create_engine

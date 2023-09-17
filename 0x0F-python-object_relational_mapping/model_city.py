@@ -8,8 +8,8 @@ this is just a basic examble to create a model
 ref : https://docs.sqlalchemy.org/en/13/orm/
         extensions/declarative/basic_use.html
 """
-from sqlalchemy import Column, Integer, String
-from model_state import Base
+from sqlalchemy import Column, Integer, String, ForeignKey
+from model_state import Base, State
 
 
 
@@ -22,4 +22,4 @@ class City(Base):
         autoincrement=True, unique=True
     )
     name = Column(String(128), nullable=False)
-    state_id = Column(Integer, ForeignKey(state.id), nullable=False)
+    state_id = Column(Integer, ForeignKey(State.id), nullable=False)
