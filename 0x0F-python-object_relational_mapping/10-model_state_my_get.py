@@ -30,10 +30,10 @@ if __name__ == "__main__":
     # Create a session instance from configured session_maker
     session = session_maker()
 
-    query_result = session.query(State).filter(State.name == sys.argv[4]).first()
+    query_res = session.query(State).filter(State.name == sys.argv[4]).first()
 
-    if query_result:
-        print(f"{query_result.id}")
+    if query_res:
+        print(f"{query_res.id}")
     else:
         print("Not found")
 

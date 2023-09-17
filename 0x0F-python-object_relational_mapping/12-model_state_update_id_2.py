@@ -30,9 +30,9 @@ if __name__ == "__main__":
     # Create a session instance from configured session_maker
     session = session_maker()
 
-    query_result_list = session.query(State).filter(State.id == 2)
+    query_res_list = session.query(State).filter(State.id == 2)
 
-    for city_record in query_result_list:
+    for city_record in query_res_list:
         # change record.name
         city_record.name = "New Mexico"
 
