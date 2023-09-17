@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """
-task 10: python boilerplate script to query database using sqlalchemy orm
-this task select first record from a table that match input
+task 11: python boilerplate script to ADD RECORD to database
+using sqlalchemy orm
 """
-import sys
+from sys import argv
 
 # import models
 from model_state import Base, State
@@ -16,9 +16,7 @@ from sqlalchemy import asc
 if __name__ == "__main__":
     # configure sqlalchemy create engine
     engine = create_engine(
-        "mysql+mysqldb://{}:{}@localhost/{}".format(
-            sys.argv[1], sys.argv[2], sys.argv[3]
-        ),
+        "mysql+mysqldb://{}:{}@localhost/{}".format(argv[1], argv[2], argv[3]),
         pool_pre_ping=True,
     )
 
@@ -30,12 +28,17 @@ if __name__ == "__main__":
     # Create a session instance from configured session_maker
     session = session_maker()
 
-    query_result = session.query(State).filter(State.name == sys.argv[4]).first()
+    new_state = State(name="Louisiana")
 
-    if query_result:
-        print(f"{query_result.id}")
-    else:
-        print("Not found")
+    # this only places instances in the session you need to commit or
+    # flush to actually push it
+    session.add(new_state)
+
+    # add record(row) to the table
+    session.commit()
+
+    # this is just task related requirement
+    print(new_state.id)
 
     # Don't forget to close session
     session.close()
