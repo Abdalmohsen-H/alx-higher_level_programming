@@ -1,15 +1,17 @@
 #!/usr/bin/python3
 """
-task 14: Model, python file for city model class ,
+task 100: city Model with relation to state,
+python file for city model class ,
 also import proviusly createed instance Base = declarative_base()
-from state_model.py
+from relationship_state.py
 that City class will inherit from
 this is just a basic examble to create a model
 ref : https://docs.sqlalchemy.org/en/13/orm/
         extensions/declarative/basic_use.html
+it's like task 14 but how the relation is new here
 """
 from sqlalchemy import Column, Integer, String, ForeignKey
-from model_state import Base, State
+from relationship_state import Base, State
 
 
 class City(Base):
