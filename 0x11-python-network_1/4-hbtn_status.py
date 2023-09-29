@@ -9,5 +9,5 @@ if __name__ == "__main__":
 
     print("Body response:")
     print(f"\t- type: {type(res.text)}")  # str
-    #print(f"\t- type: {type(res.content)}")  # bytes
+    # print(f"\t- type: {type(res.content)}")  # bytes
     print("\t- content: {}".format(res.text))
