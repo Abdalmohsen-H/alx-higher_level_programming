@@ -9,6 +9,6 @@ from sys import argv
 if __name__ == "__main__":
     # post request, data should be bytes so we do next line first
     data = parse.urlencode({"email": argv[2]}).encode("ascii")
-    fetch_url = request.Request(argv[1], data) 
+    fetch_url = request.Request(argv[1], data)
     with request.urlopen(fetch_url) as response:
         print(response.read().decode("utf-8"))
