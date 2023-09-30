@@ -13,7 +13,7 @@ if __name__ == "__main__":
         print('missing req arguments')
 
     else:
-        username = argv[1]  # github uses email as username
+        username = argv[1]  # github uses username or email as username
         passwd = token = argv[2]  # github uses token as passwd
 
         basic = requests.HTTPBasicAuth(username, passwd)
