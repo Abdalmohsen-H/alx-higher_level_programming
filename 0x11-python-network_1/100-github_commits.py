@@ -4,10 +4,18 @@
 import requests
 from sys import argv
 
-repo = argv[1]
-owner = argv[2]
-url = f"https://api.github.com/repos/{repo}/{owner}/commits"
-res = requests.get(url)
-res = res.json()
-for idx in range(0, 10):
-    print(f"{res[idx].get('sha')}: {res[idx]['commit']['author'].get('name')}")
+if __name__ == "__main__":
+    repo = argv[1]
+    owner = argv[2]
+    url = f"https://api.github.com/repos/{repo}/{owner}/commits"
+    res = requests.get(url)
+    res_json = res.json()
+    try:
+        for idx in range(0, 10):
+            print("{}: {}".format(
+                res_json[idx].get('sha'),
+                res_json[idx]['commit']['author'].get('name')
+                )
+                )
+    except IndexError:
+        pass
