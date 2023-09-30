@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-# task 10(file100): github API challange A.Hesham
-# get last 10 commits from a repo
+"""task 10(file100): github API challange A.Hesham
+get last 10 commits from a repo"""
 import requests
 import sys
+
 
 if __name__ == "__main__":
     repo = sys.argv[1]
