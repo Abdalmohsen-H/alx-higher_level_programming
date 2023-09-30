@@ -6,17 +6,14 @@ auth info is passed from user as arguments to py script
 github API with Basic Authentication """
 import requests
 from sys import argv
+from requests.auth import HTTPBasicAuth
 
 
 if __name__ == "__main__":
-    if len(argv) < 3:  # missing req arguments
-        print('missing req arguments')
-
-    else:
         username = argv[1]  # github uses username or email as username
         passwd = token = argv[2]  # github uses token as passwd
 
-        basic = requests.HTTPBasicAuth(username, passwd)
+        basic = HTTPBasicAuth(username, passwd)
         res = requests.get('https://api.github.com/user', auth=basic)
 
         # another way not required in this task
