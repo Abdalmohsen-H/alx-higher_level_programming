@@ -4,6 +4,7 @@ package, then print user ID from the response if it's a valid json
 , otherwise just return error msg
 auth info is passed from user as arguments to py script
 github API with Basic Authentication """
+import requests
 from requests.auth import HTTPBasicAuth
 from sys import argv
 
