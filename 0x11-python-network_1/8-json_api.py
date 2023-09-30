@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""task 7:  Py script that do post request using requests
+"""task 8: Py script that do post request using requests
 package, then print body of the response if it's a valid json
 , otherwise just return error msg
 query_param is passed from user as arguments to py script
