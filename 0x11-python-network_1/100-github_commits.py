@@ -2,11 +2,11 @@
 # task 10(file100): github API challange A.Hesham
 # get last 10 commits from a repo
 import requests
-from sys import argv
+import sys
 
 if __name__ == "__main__":
-    repo = argv[1]
-    owner = argv[2]
+    repo = sys.argv[1]
+    owner = sys.argv[2]
     url = "https://api.github.com/repos/{}/{}/commits".format(owner, repo)
     res = requests.get(url)
     res_json = res.json()
