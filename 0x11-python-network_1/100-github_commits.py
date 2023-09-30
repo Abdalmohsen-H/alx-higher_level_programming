@@ -14,8 +14,7 @@ if __name__ == "__main__":
         for idx in range(0, 10):
             print("{}: {}".format(
                 res_json[idx].get('sha'),
-                res_json[idx]['commit']['author'].get('name')
-                )
-                )
+                res_json[idx].get('commit').get('author').get('name')
+                ))
     except IndexError:
         pass
