@@ -7,7 +7,7 @@ from sys import argv
 if __name__ == "__main__":
     repo = argv[1]
     owner = argv[2]
-    url = f"https://api.github.com/repos/{owner}/{repo}/commits"
+    url = "https://api.github.com/repos/{}/{}/commits".format(argv[2], argv[1])
     res = requests.get(url)
     res_json = res.json()
     try:
