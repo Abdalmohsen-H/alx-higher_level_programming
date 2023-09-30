@@ -4,12 +4,15 @@ package, then print user ID from the response if it's a valid json
 , otherwise just return error msg
 auth info is passed from user as arguments to py script
 github API with Basic Authentication """
-import requests
-from sys import argv
 from requests.auth import HTTPBasicAuth
+from sys import argv
 
 
 if __name__ == "__main__":
+    if len(argv) < 3:  # missing req arguments
+        print('missing req arguments')
+
+    else:
         username = argv[1]  # github uses username or email as username
         passwd = token = argv[2]  # github uses token as passwd
 
