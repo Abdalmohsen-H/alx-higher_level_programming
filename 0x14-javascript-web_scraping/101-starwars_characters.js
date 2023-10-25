@@ -1,22 +1,26 @@
 #!/usr/bin/node
-// import fs module (file system module)
+// import request module
 const request = require('request');
+// import util module
+const util = require('util');
 // assign first argument to mvId
 const mvId = process.argv[2];
 const url = 'https://swapi-api.alx-tools.com/api/films/' + mvId;
+const promisifedrequest = util.promisify(request);
 
-request.get(url, (error, response) => {
-  if (error) {
-    console.log(error);
-  }
-  const chrs = JSON.parse(response.body).characters;
-  chrs.forEach(charUrl => {
-    request.get(charUrl, (error, res) => {
-      if (error) {
-        console.log(error);
-      }
-      console.log(JSON.parse(res.body).name);
+async function getAlllNames (url) {
+  try {
+    const chrs = (await promisifedrequest(url, { json: true })).body.characters;
+    for (const charUrl of chrs) {
+      // console.log(charUrl);
+      const resp = await promisifedrequest(charUrl, { json: true });
+
+      const charName = resp.body.name;
+      console.log(charName);
     }
-    );
-  });
-});
+  } catch (err) {
+    console.log(err);
+  }
+}
+
+getAlllNames(url);
