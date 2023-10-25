@@ -1,5 +1,5 @@
 #!/usr/bin/node
-// import fs module (file system module)
+// import request module
 const request = require('request');
 // assign first argument to mvId
 const mvId = process.argv[2];
